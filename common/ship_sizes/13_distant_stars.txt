@@ -185,6 +185,6 @@ space_amoeba_centenarian = {
 	num_target_locators = 0
 	icon_frame = 12
 	class = shipclass_military
-	is_designable = yes
+	is_designable = no
 	pre_communications_name = "NO_COMMUNICATIONS_AMOEBA"
 }

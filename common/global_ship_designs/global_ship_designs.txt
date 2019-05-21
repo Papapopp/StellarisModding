@@ -26,7 +26,7 @@ ship_design = {
 ship_design = {
 	name = "NAME_Small_War_Organism_Blue"
 	ship_size = war_amoeba
-	hide_size = no
+	hide_size = yes
 	
 	section = {
 		template = "war_amoeba_small_beige_blue"

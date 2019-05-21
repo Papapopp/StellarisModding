@@ -761,7 +761,7 @@ war_amoeba = { # Copy of space_amoeba in 07_space_monsters.txt
 	size_multiplier = 1
 	fleet_slot_size = 1
 	section_slots = { "mid" = { locator = "part1" } }
-	num_target_locators = 0
+	num_target_locators = 1
 	icon_frame = 12
 
 	base_buildtime = @corvette_build_time
