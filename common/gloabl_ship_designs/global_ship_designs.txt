@@ -1,0 +1,53 @@
+# This file configures pre-scripted designs the game will use. 
+
+# Construction Ship
+ship_design = {
+	name = "NAME_Constructor"
+	ship_size = constructor
+
+	section = {
+		template = "DEFAULT_CONSTRUCTION_SECTION"
+		slot = "mid"
+	}
+}
+
+# Colony Ship
+ship_design = {
+	name = "NAME_Colonizer"
+	ship_size = colonizer
+
+	section = {
+		template = "DEFAULT_COLONIZATION_SECTION"
+		slot = "mid"
+	}
+}
+
+# Small War Amoeba
+ship_design = {
+	name = "NAME_Small_War_Organism_Blue"
+	ship_size = war_amoeba
+	hide_size = no
+	
+	section = {
+		template = "war_amoeba_small_beige_blue"
+		slot = "mid"
+		
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_SPACE_AMOEBA_WEAPON"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "SMALL_SPACE_AMOEBA_WEAPON"
+		}
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "SMALL_SPACE_AMOEBA_WEAPON"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}		
+	}
+	required_component="BIO_DRIVE"
+}

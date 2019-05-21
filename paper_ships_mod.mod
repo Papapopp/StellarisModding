@@ -1,4 +1,4 @@
-name="Paper Ships"
+name="Amoebas And More"
 path="mod/paper_ships_mod"
 tags={
 	"Balance"
