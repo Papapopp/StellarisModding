@@ -32,29 +32,29 @@ ship_design = {
 
 # Large War Amoeba w/ warp
 ship_design = {
-	name = "NAME_Great_Space_Organism"
+	name = "NAME_Great_War_Organism"
 	ship_size = space_amoeba_mother
 	hide_size = yes
 	
 	section = {
-		template = "space_amoeba_large_beige_blue"
+		template = "war_amoeba_large_beige_blue"
 		slot = "mid"
 		
 		component = {
 			slot = "LARGE_GUN_01"
-			template = "LARGE_SPACE_AMOEBA_WEAPON"
+			template = "LARGE_WAR_AMOEBA_WEAPON"
 		}
 		component = {
 			slot = "SMALL_GUN_01"
-			template = "SMALL_SPACE_AMOEBA_WEAPON"
+			template = "SMALL_WAR_AMOEBA_WEAPON"
 		}
 		component = {
 			slot = "SMALL_GUN_02"
-			template = "SMALL_SPACE_AMOEBA_WEAPON"
+			template = "SMALL_WAR_AMOEBA_WEAPON"
 		}
 		component = {
 			slot = "STRIKE_CRAFT_01"
-			template = "AMOEBA_STRIKE_CRAFT"
+			template = "WAR_AMOEBA_STRIKE_CRAFT"
 		}
 		component = {
 			slot = "AUX_UTILITY_1"
