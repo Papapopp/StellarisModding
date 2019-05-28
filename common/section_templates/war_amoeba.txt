@@ -37,7 +37,7 @@ ship_section_template = {
 # Mother amoeba section template
 ship_section_template = {
 	key = "war_amoeba_large_beige_blue"
-	ship_size = space_amoeba_mother
+	ship_size = war_amoeba_mother
 	fits_on_slot = mid
 	entity = "space_amoeba_large_section_entity"
 	icon = "GFX_ship_part_core_mid"
@@ -69,12 +69,19 @@ ship_section_template = {
 	}
 	
 	aux_utility_slots = 1
+
+	resources = {
+		category = ship_sections
+		cost = {
+			food = 50
+		}
+	}
 }
 
 # War amoeba Centenarian section
 ship_section_template = {
 	key = "war_amoeba_centenarian_key"
-	ship_size = space_amoeba_centenarian
+	ship_size = war_amoeba_centenarian
 	fits_on_slot = mid
 	entity = "space_amoeba_large_section_bright_entity"
 	icon = "GFX_ship_part_core_mid"
@@ -211,4 +218,11 @@ ship_section_template = {
 	}
 	
 	aux_utility_slots = 1
+
+	resources = {
+		category = ship_sections
+		cost = {
+			food = 50
+		}
+	}
 }
