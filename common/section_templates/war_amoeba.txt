@@ -1,4 +1,4 @@
-# War Amoeba Section
+# Small War Amoeba Section
 ship_section_template = {
 	key = "war_amoeba_small_beige_blue"
 	ship_size = war_amoeba
@@ -34,8 +34,10 @@ ship_section_template = {
 		}
 	}
 }
+
+# War amoeba Centenarian section
 ship_section_template = {
-	key = "space_amoeba_centenarian_key"
+	key = "war_amoeba_centenarian_key"
 	ship_size = space_amoeba_centenarian
 	fits_on_slot = mid
 	entity = "space_amoeba_large_section_bright_entity"
