@@ -1,10 +1,10 @@
 @speed_slow = 100
 
-#############
+###############
 # War Amoebas #
-#############
+###############
 
-war_amoeba = { # Copy of space_amoeba in 07_space_monsters.txt s
+war_amoeba = { # Copy of space_amoeba in 07_space_monsters.txt 
 	graphical_culture = no
 	entity = space_amoeba_medium_entity
 	is_space_object = yes
@@ -29,6 +29,10 @@ war_amoeba = { # Copy of space_amoeba in 07_space_monsters.txt s
 	construction_type = starbase_shipyard
 	is_designable = no
 	enable_default_design = yes
+
+	possible_starbase = {#you need a hatchery to spawn amoeba
+		has_starbase_building = amoeba_hatchery
+	}
 
 	resources = {
 		category = ships
@@ -57,8 +61,24 @@ war_amoeba_mother = {
 	section_slots = { "mid" = { locator = "part1" } }
 	num_target_locators = 0
 	icon_frame = 12
+
+	base_buildtime = @destroyer_build_time
+
 	class = shipclass_military
+	construction_type = starbase_shipyard
 	is_designable = no
+	enable_default_design = yes
+
+	possible_starbase = {#you need a hatchery to spawn amoeba
+		has_starbase_building = amoeba_hatchery
+	}
+
+	resources = {
+		category = ships
+		upkeep = {
+			food = 1
+		}
+	}
 }
 
 # modified copy of Adopted Space Amoeba Centenarian
@@ -89,6 +109,10 @@ war_amoeba_centenarian = {
 	construction_type = starbase_shipyard
 	is_designable = no
 	enable_default_design = yes
+
+	possible_starbase = { #you need a hatchery to spawn amoeba
+		has_starbase_building = amoeba_hatchery
+	}
 
 	resources = {
 		category = ships
