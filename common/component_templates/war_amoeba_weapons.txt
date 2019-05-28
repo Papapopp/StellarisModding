@@ -93,7 +93,7 @@ strike_craft_component_template = {
 	projectile_gfx = "small_space_amoeba_weapon"
 	
 	component_set = "AMOEBA_STRIKE_CRAFT_1"
-	prerequisites = { "tech_amoeba_strike_craft_1" }
+	#prerequisites = { "tech_amoeba_strike_craft_1" }
 	
 	icon = "GFX_ship_part_amoeba_strike_craft_1"
 	icon_frame = 1
