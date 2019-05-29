@@ -56,8 +56,8 @@ war_amoeba_mother = {
 		ship_armor_add = 1500
 	}
 	max_hitpoints = 2000
-	size_multiplier = 4
-	fleet_slot_size = 4
+	size_multiplier = 2
+	fleet_slot_size = 2
 	section_slots = { "mid" = { locator = "part1" } }
 	num_target_locators = 0
 	icon_frame = 12
