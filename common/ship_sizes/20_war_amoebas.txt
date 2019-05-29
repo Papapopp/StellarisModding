@@ -17,8 +17,8 @@ war_amoeba = { # Copy of space_amoeba in 07_space_monsters.txt
 		ship_armor_add = 100
 	}
 	max_hitpoints = 300
-	size_multiplier = 1
-	fleet_slot_size = 1
+	size_multiplier = 4
+	fleet_slot_size = 4
 	section_slots = { "mid" = { locator = "part1" } }
 	num_target_locators = 0
 	icon_frame = 12
@@ -29,6 +29,8 @@ war_amoeba = { # Copy of space_amoeba in 07_space_monsters.txt
 	construction_type = starbase_shipyard
 	is_designable = no
 	enable_default_design = yes
+
+	default_behaviour = swarm
 
 	possible_starbase = {#you need a hatchery to spawn amoeba
 		has_starbase_building = amoeba_hatchery
@@ -56,8 +58,8 @@ war_amoeba_mother = {
 		ship_armor_add = 1500
 	}
 	max_hitpoints = 2000
-	size_multiplier = 2
-	fleet_slot_size = 2
+	size_multiplier = 4
+	fleet_slot_size = 4
 	section_slots = { "mid" = { locator = "part1" } }
 	num_target_locators = 0
 	icon_frame = 12
@@ -65,9 +67,12 @@ war_amoeba_mother = {
 	base_buildtime = @destroyer_build_time
 
 	class = shipclass_military
+	#required_component_set = "AMOEBA_STRIKE_CRAFT_1"
 	construction_type = starbase_shipyard
 	is_designable = no
 	enable_default_design = yes
+
+	default_behaviour = picket
 
 	possible_starbase = {#you need a hatchery to spawn amoeba
 		has_starbase_building = amoeba_hatchery
@@ -105,9 +110,12 @@ war_amoeba_centenarian = {
 	base_buildtime = @cruiser_build_time
 
 	class = shipclass_military
+	#required_component_set = "AMOEBA_STRIKE_CRAFT_1"
 	construction_type = starbase_shipyard
 	is_designable = no
 	enable_default_design = yes
+
+	default_behaviour = line
 
 	possible_starbase = { #you need a hatchery to spawn amoeba
 		has_starbase_building = amoeba_hatchery
