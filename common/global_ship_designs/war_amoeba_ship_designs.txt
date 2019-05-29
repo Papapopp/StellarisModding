@@ -34,7 +34,6 @@ ship_design = {
 ship_design = {
 	name = "NAME_Great_War_Organism"
 	ship_size = war_amoeba_mother
-	hide_size = yes
 	
 	section = {
 		template = "war_amoeba_large_beige_blue"
