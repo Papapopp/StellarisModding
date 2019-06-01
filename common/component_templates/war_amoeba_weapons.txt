@@ -6,7 +6,6 @@
 
 @critter_cost_value = 35
 
-
 weapon_component_template = {
 	key = "SMALL_WAR_AMOEBA_WEAPON"
 
@@ -50,11 +49,10 @@ weapon_component_template = {
 ### Strike Craft
 
 strike_craft_component_template = {
-	key = "WAR_AMOEBA_STRIKE_CRAFT"
+	key = "WAR_AMOEBA_SPAWN_STRIKE_CRAFT"
 	
 	size = LARGE
 	entity = "space_amoeba_small_entity"
-	power = -30
 	resources = {
 		category = ship_components
 		cost = {
@@ -89,9 +87,6 @@ strike_craft_component_template = {
 	
 	weapon_type = instant
 	projectile_gfx = "small_space_amoeba_weapon"
-	
-	#component_set = "AMOEBA_STRIKE_CRAFT_1"
-	#prerequisites = { "tech_amoeba_strike_craft_1" }
 	
 	icon = "GFX_ship_part_amoeba_strike_craft_1"
 	icon_frame = 1
