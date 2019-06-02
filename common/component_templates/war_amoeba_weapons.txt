@@ -1,4 +1,4 @@
-@regen = 0.13
+﻿@regen = 0.13
 
 # ####################
 #  Critter Weapons - Space Amoeba

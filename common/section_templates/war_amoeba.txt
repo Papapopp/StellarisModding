@@ -1,4 +1,4 @@
-# Small War Amoeba Section
+﻿# Small War Amoeba Section
 ship_section_template = {
 	key = "war_amoeba_small_beige_blue"
 	ship_size = war_amoeba
