@@ -1,4 +1,4 @@
-﻿@regen = 0.13
+@regen = 0.13
 
 # ####################
 #  Critter Weapons - Space Amoeba
@@ -61,7 +61,7 @@ strike_craft_component_template = {
 	}
 
 	count = 8
-	regeneration_per_day = @regen
+	regeneration_per_day = 0.13
 	launch_time = 1.5
 	
 	damage = { min = 20 max = 30 }
