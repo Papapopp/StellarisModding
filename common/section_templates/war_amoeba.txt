@@ -1,4 +1,4 @@
-﻿# Small War Amoeba Section
+# Small War Amoeba Section
 ship_section_template = {
 	key = "war_amoeba_small_beige_blue"
 	ship_size = war_amoeba
@@ -27,12 +27,12 @@ ship_section_template = {
 	
 	aux_utility_slots = 1
 
-	resources = {
-		category = ship_sections
-		cost = {
-			food = 50
-		}
-	}
+	#resources = {
+	#	category = ship_sections
+	#	cost = {
+	#		food = 50
+	#	}
+	#}
 }
 # Mother amoeba section template
 ship_section_template = {
@@ -70,12 +70,12 @@ ship_section_template = {
 	
 	aux_utility_slots = 1
 
-	resources = {
-		category = ship_sections
-		cost = {
-			food = 50
-		}
-	}
+	#resources = {
+	#	category = ship_sections
+	#	cost = {
+	#		food = 50
+	#	}
+	#}
 }
 
 # War amoeba Centenarian section
@@ -219,10 +219,10 @@ ship_section_template = {
 	
 	aux_utility_slots = 1
 
-	resources = {
-		category = ship_sections
-		cost = {
-			food = 50
-		}
-	}
+	#resources = {
+	#	category = ship_sections
+	#	cost = {
+	#		food = 50
+	#	}
+	#}
 }
