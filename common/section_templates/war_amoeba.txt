@@ -1,9 +1,9 @@
-# Small War Amoeba Section
+# war amoeba section template
 ship_section_template = {
-	key = "war_amoeba_small_beige_blue"
-	ship_size = war_amoeba
+	key = "war_amoeba_small_beige_blue" # used  to reference this template
+	ship_size = war_amoeba # referencing the size it is compatible with
 	fits_on_slot = mid
-	entity = "space_amoeba_medium_entity"
+	entity = "space_amoeba_medium_entity" # reference the model that this section will use.
 	icon = "GFX_ship_part_core_mid"
 	
 	component_slot = {
@@ -26,15 +26,8 @@ ship_section_template = {
 	}
 	
 	aux_utility_slots = 1
-
-	#resources = {
-	#	category = ship_sections
-	#	cost = {
-	#		food = 50
-	#	}
-	#}
 }
-# Mother amoeba section template
+# Mother war amoeba section template
 ship_section_template = {
 	key = "war_amoeba_large_beige_blue"
 	ship_size = war_amoeba_mother
@@ -69,13 +62,6 @@ ship_section_template = {
 	}
 	
 	aux_utility_slots = 1
-
-	#resources = {
-	#	category = ship_sections
-	#	cost = {
-	#		food = 50
-	#	}
-	#}
 }
 
 # War amoeba Centenarian section
@@ -218,11 +204,4 @@ ship_section_template = {
 	}
 	
 	aux_utility_slots = 1
-
-	#resources = {
-	#	category = ship_sections
-	#	cost = {
-	#		food = 50
-	#	}
-	#}
 }
