@@ -1,0 +1,39 @@
+####################################################
+#
+# War Ameoba Anomaly Events
+#
+# Written by Wyatt Sanders and Jared Sager
+#
+####################################################
+
+namespace = war_ameoba_mod_anomaly
+
+# ROOT = ship scope
+# FROM = planet scope
+
+# ameoba eggs found anomaly
+ship_event = {
+	id = war_ameoba_egg_anomaly.1
+	title = "war_ameoba_egg_anomaly.1.name"
+	desc = "war_ameoba_egg_anomaly.1.desc"
+	picture = GFX_evt_friendly_amoeba
+	show_sound = event_space_amoeba
+	location = FROM
+	
+	is_triggered_only = yes
+			
+	immediate = {
+		from = { clear_deposits = yes }
+		#owner = { country_event = { id = story.2 days = 30 } }
+	}
+
+	option = {
+		name = war_ameoba_egg_anomaly.1.a
+		leader = { 
+			add_experience = 200
+		}
+		FROM = { 
+			set_deposit = d_society_2
+		}
+	}
+}
