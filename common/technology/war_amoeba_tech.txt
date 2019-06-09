@@ -1,0 +1,22 @@
+####################################################
+#
+# War Amoeba Technologies
+#
+# Written by Wyatt Sanders and Jared Sager
+#
+####################################################
+
+
+
+# ##################
+# name of tech
+# ##################
+
+war_amoeba_tech_1 = {
+	cost = 0
+	area = physics
+	tier = 0
+	category = { computing }
+	start_tech = yes
+	
+}

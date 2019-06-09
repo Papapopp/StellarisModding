@@ -1,16 +1,16 @@
 ####################################################
 #
-# War Ameoba Anomaly Events
+# War Amoeba Anomaly Events
 #
 # Written by Wyatt Sanders and Jared Sager
 #
 ####################################################
 
-# ameoba eggs found
-ameoba_eggs_category = {
+# amoeba eggs found
+amoeba_eggs_category = {
 	should_ai_use = yes 										# 	Allows AI empires to generate the category.
 	desc = {
-		text = "ameoba_eggs_found"								#	ameoba_eggs_found is used for localization as the tag for the description of this anomaly before it's researched
+		text = "amoeba_eggs_found"								#	amoeba_eggs_found is used for localization as the tag for the description of this anomaly before it's researched
 	}
 
 	picture = GFX_evt_microscopic_life							# 	picture that shows when the anomaly is found 
@@ -21,7 +21,7 @@ ameoba_eggs_category = {
 			add = 100 # change to 3 after testing
 			is_asteroid = yes
 		}
-		modifier = {											# 	nations that have encountered ameobas before have double the chance of finding this anomaly 
+		modifier = {											# 	nations that have encountered amoebas before have double the chance of finding this anomaly 
 			factor =2 
 			owner = { 
 				has_country_flag = amoeba_encountered 
@@ -31,7 +31,7 @@ ameoba_eggs_category = {
 
 	max_once = yes 												# 	anomaly can only be found once 
 
-	on_success = war_ameoba_mod_anomaly.war_ameoba_egg_1 		# 	on_success = <event id>,  eventID = namespace.event_specific_tag
+	on_success = war_amoeba_mod_anomaly.war_amoeba_egg_1 		# 	on_success = <event id>,  eventID = namespace.event_specific_tag
 
 }
 

@@ -1,21 +1,22 @@
 ####################################################
 #
-# War Ameoba Anomaly Events
+# War Amoeba Anomaly Events
 #
 # Written by Wyatt Sanders and Jared Sager
 #
 ####################################################
 
-namespace = war_ameoba_mod_anomaly
+namespace = war_amoeba_mod_anomaly
 
 # ROOT = ship scope
 # FROM = planet scope
 
-# ameoba eggs found anomaly
+# Amoeba
+ eggs found anomaly
 ship_event = {
-	id = war_ameoba_mod_anomaly.war_ameoba_egg_1  					# 	eventID = namespace.event_specific_tag
-	title = "war_ameoba_mod_anomaly.war_ameoba_egg_1.name" 			# 	war_ameoba_mod_anomaly.war_ameoba_egg_1.name is used as localization tag for the name of the event
-	desc = "war_ameoba_mod_anomaly.war_ameoba_egg_1.desc" 			#	war_ameoba_mod_anomaly.war_ameoba_egg_1.desc is used as localization tag for the description of the event
+	id = war_amoeba_mod_anomaly.war_amoeba_egg_1  					# 	eventID = namespace.event_specific_tag
+	title = "war_amoeba_mod_anomaly.war_amoeba_egg_1.name" 			# 	war_amoeba_mod_anomaly.war_amoeba_egg_1.name is used as localization tag for the name of the event
+	desc = "war_amoeba_mod_anomaly.war_amoeba_egg_1.desc" 			#	war_amoeba_mod_anomaly.war_amoeba_egg_1.desc is used as localization tag for the description of the event
 	picture = GFX_evt_friendly_amoeba 								#	picture to show for event 
 	show_sound = event_space_amoeba  								#	sound to play for event 
 	location = FROM
@@ -28,7 +29,7 @@ ship_event = {
 	}
 
 	option = {
-		name = war_ameoba_mod_anomaly.war_ameoba_egg_1.a 			#	war_ameoba_mod_anomaly.war_ameoba_egg_1.a is used as localization tag for choice (a) after completing the event
+		name = war_amoeba_mod_anomaly.war_amoeba_egg_1.a 			#	war_amoeba_mod_anomaly.war_amoeba_egg_1.a is used as localization tag for choice (a) after completing the event
 		leader = { 
 			add_experience = 200									# 	add experience to the leader that completed this event
 		}
