@@ -1,18 +1,19 @@
 @regen = 0.13
 
 # ####################
-#  Critter Weapons - Space Amoeba
+#  Weapon templates for war amoebas
+#  templates define types of weapons so that they can be used in designs. the actual stats and other information is in the .csv file.
 # ####################
 
 @critter_cost_value = 35
 
 weapon_component_template = {
-	key = "SMALL_WAR_AMOEBA_WEAPON"
+	key = "SMALL_WAR_AMOEBA_WEAPON" # Reference name to the weapon type.
 
 	size = small
-	entity = "small_space_amoeba_weapon_entity"
-	type = instant
-	icon = "GFX_ship_part_space_whale_weapon_1"
+	entity = "small_space_amoeba_weapon_entity" # Model for the weapon.
+	type = instant # Defines if the attack it makes is instant effect or delayed like a missle.
+	icon = "GFX_ship_part_space_whale_weapon_1" #  The icon in menus and the inspector for this component
 	icon_frame = 1
 	projectile_gfx = "small_space_amoeba_weapon"
 	tags = { weapon_type_energy }
