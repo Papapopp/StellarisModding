@@ -11,11 +11,12 @@ tech_amoeba_strike_craft_1 = {
 	tier = 2
 	category = { biology }
 	ai_update_type = military
+	#weight = @tier2weight1
 	weight = 0
 
 	weight_modifier = {
 		modifier = {
-			add = 95
+			add = 85
 			has_country_flag = amoeba_encountered
 		}
 	}

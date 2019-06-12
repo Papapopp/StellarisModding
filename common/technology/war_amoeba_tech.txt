@@ -19,8 +19,9 @@ war_amoeba_tech_amoeba_training = {
 	tier = 1
 	category = { biology }	
 	prerequisites = { "tech_genome_mapping" }  # change later
+	#weight = @tier1weight2
 	weight = 0
-	
+
 	weight_modifier = {
 		modifier = {
 			add = 95
@@ -93,7 +94,7 @@ war_amoeba_tech_mutation_stimulators = {
 	
 	weight_modifier = {
 		factor = 1 	# # more common or less common
-		
+
 		modifier = {
 			factor = 1.25
 			research_leader = {
