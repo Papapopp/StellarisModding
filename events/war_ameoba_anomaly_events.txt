@@ -11,8 +11,7 @@ namespace = war_amoeba_mod_anomaly
 # ROOT = ship scope
 # FROM = planet scope
 
-# Amoeba
- eggs found anomaly
+# Amoeba eggs found anomaly
 ship_event = {
 	id = war_amoeba_mod_anomaly.war_amoeba_egg_1  					# 	eventID = namespace.event_specific_tag
 	title = "war_amoeba_mod_anomaly.war_amoeba_egg_1.name" 			# 	war_amoeba_mod_anomaly.war_amoeba_egg_1.name is used as localization tag for the name of the event

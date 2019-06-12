@@ -23,7 +23,7 @@ war_amoeba_centenarian_plural:0 "centenarian war amoebas"
  # ROOT = ship scope
 
 # amoeba eggs found
-amoeba_eggs_category: Asteriod structures
+amoeba_eggs_category: "Asteriod structures"
 amoeba_eggs_found: "The astroid [From.GetName] is remarkably deformed, possessing multiple enormous cracked formations on its surface that defy current geological models."
 
  ####################################

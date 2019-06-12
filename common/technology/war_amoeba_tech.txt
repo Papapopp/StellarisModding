@@ -55,12 +55,7 @@ war_amoeba_tech_growth_acceleration = {
 	
 	
 	weight_modifier = {
-		factor = 1 	# more common or less common
-		modifier = {
-			factor = .75
-			has_authority = auth_hive_mind
-		}
-
+		factor = 1
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -98,11 +93,7 @@ war_amoeba_tech_mutation_stimulators = {
 	
 	weight_modifier = {
 		factor = 1 	# # more common or less common
-		modifier = {
-			factor = .75
-			has_authority = auth_hive_mind
-		}
-
+		
 		modifier = {
 			factor = 1.25
 			research_leader = {
