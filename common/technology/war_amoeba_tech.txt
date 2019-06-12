@@ -19,17 +19,12 @@ war_amoeba_tech_amoeba_training = {
 	tier = 1
 	category = { biology }	
 	prerequisites = { "tech_genome_mapping" }  # change later
-	weight = @tier1weight2
-	
+	weight = 0
 	
 	weight_modifier = {
-		factor = 1	# more common or less common
 		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_biology"
-			}
+			add = 95
+			has_country_flag = amoeba_encountered
 		}
 	}
 	
@@ -46,11 +41,11 @@ war_amoeba_tech_amoeba_training = {
 
 
 # ##########################
-# amoeba mutation stimulators
+# amoeba growth acceleration
 # teir 2 for making ameobas
 # ##########################
 
-war_amoeba_tech_mutation_stimulators = {
+war_amoeba_tech_growth_acceleration = {
 	cost = @tier2cost2
 	area = society
 	tier = 2
@@ -88,7 +83,7 @@ war_amoeba_tech_mutation_stimulators = {
 }
 
 # ##########################
-# amoeba gene tailoring
+# amoeba mutation simulators
 # teir 3 for making ameobas
 # ##########################
 
@@ -97,7 +92,7 @@ war_amoeba_tech_mutation_stimulators = {
 	area = society
 	tier = 3
 	category = { biology }	
-	prerequisites = { "war_amoeba_tech_mutation_stimulators" "tech_gene_tailoring" }   # requires teir 2 for making ameobas and Gene Tailoring (modify pops) 
+	prerequisites = { "war_amoeba_tech_growth_acceleration" "tech_gene_tailoring" }   # requires teir 2 for making ameobas and Gene Tailoring (modify pops) 
 	weight = @tier3weight2
 	
 	

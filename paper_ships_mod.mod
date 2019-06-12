@@ -4,4 +4,4 @@ tags={
 	"Balance"
 	"Gameplay"
 }
-supported_version="2.3.0"
+supported_version="2.3.*"

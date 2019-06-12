@@ -35,6 +35,8 @@ war_amoeba = { # Copy of space_amoeba in 07_space_monsters.txt
 
 	#default_behaviour = swarm
 
+	prerequisites = { "war_amoeba_tech_amoeba_training" }
+
 	possible_starbase = { #you need a hatchery to spawn amoeba
 		has_starbase_building = amoeba_hatchery
 	}
@@ -75,6 +77,8 @@ war_amoeba_mother = {
 	enable_default_design = yes
 
 	#default_behaviour = picket
+
+	prerequisites = { "war_amoeba_tech_growth_acceleration" }
 
 	possible_starbase = {#you need a hatchery to spawn amoeba
 		has_starbase_building = amoeba_hatchery
@@ -117,6 +121,8 @@ war_amoeba_centenarian = {
 	enable_default_design = yes
 
 	#default_behaviour = line
+
+	prerequisites = { "war_amoeba_tech_mutation_stimulators" }
 
 	possible_starbase = { #you need a hatchery to spawn amoeba
 		has_starbase_building = amoeba_hatchery
