@@ -8,44 +8,22 @@
 
 
 
-# ##################
-# name of tech
-# ##################
+# ##########################
+# amoeba training tech
+# teir 1 for making ameobas
+# ##########################
 
-war_amoeba_tech_1 = {
-	prerequisites = { "tech_cloning" }
-}
-
-#Cloning tech to be used as an example
-tech_cloning = {
-	cost = @tier2cost2
+war_amoeba_tech_amoeba_training = {
+	cost = @tier1cost2
 	area = society
-	tier = 2
+	tier = 1
 	category = { biology }	
-	prerequisites = { "tech_genome_mapping" }
-	weight = @tier2weight2
+	prerequisites = { "tech_genome_mapping" }  # change later
+	weight = @tier1weight2
 	
-	modifier = {
-		pop_growth_speed = 0.10
-	}
-
-	potential = {
-		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
-			has_civic = civic_machine_assimilator
-		}
-	}
 	
 	weight_modifier = {
-		factor = 1.5 	# genetech needs to be a bit more common
-		modifier = {
-			factor = 1.25
-			has_authority = auth_hive_mind
-		}
-		modifier = {
-			factor = 1.25
-			has_tradition = tr_supremacy_adopt
-		}
+		factor = 1	# more common or less common
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -64,4 +42,89 @@ tech_cloning = {
 			}
 		}
 	}
+}
+
+
+# ##########################
+# amoeba mutation stimulators
+# teir 2 for making ameobas
+# ##########################
+
+war_amoeba_tech_mutation_stimulators = {
+	cost = @tier2cost2
+	area = society
+	tier = 2
+	category = { biology }	
+	prerequisites = { "tech_amoeba_strike_craft_1" "war_amoeba_tech_amoeba_training"}  # requires teir 1 for making ameobas and the Amoeba Breeding Program (amoeba flaggela strike crafts) 
+	weight = @tier2weight2
+	
+	
+	weight_modifier = {
+		factor = 1 	# more common or less common
+		modifier = {
+			factor = .75
+			has_authority = auth_hive_mind
+		}
+
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+
+}
+
+# ##########################
+# amoeba gene tailoring
+# teir 3 for making ameobas
+# ##########################
+
+war_amoeba_tech_mutation_stimulators = {
+	cost = @tier3cost2
+	area = society
+	tier = 3
+	category = { biology }	
+	prerequisites = { "war_amoeba_tech_mutation_stimulators" "tech_gene_tailoring" }   # requires teir 2 for making ameobas and Gene Tailoring (modify pops) 
+	weight = @tier3weight2
+	
+	
+	weight_modifier = {
+		factor = 1 	# # more common or less common
+		modifier = {
+			factor = .75
+			has_authority = auth_hive_mind
+		}
+
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+
 }
