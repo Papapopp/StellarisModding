@@ -9,10 +9,26 @@
 l_english: 
 
 ####################################
-# War Amoeba buildings 
+# War Amoeba Buildings 
 ####################################
 
 sm_amoeba_hatchery:0 "Amoeba Hatchery"
+
+####################################
+# War Amoeba Technology
+####################################
+
+ # ########
+ # Society
+ # ########
+
+ #War Amoeba ship unlocks
+ war_amoeba_tech_amoeba_training:0 "Amoeba Training"
+ war_amoeba_tech_amoeba_training_desc:0 "A small subset of the Ameoba population respond suprisingly well to military commands. It seems this, War-Brood, can be trained as organic craft for our navy."
+ war_amoeba_tech_growth_acceleration:0 "Amoeba Growth Acceleration"
+ war_amoeba_tech_growth_acceleration_desc:0 "Nutrient-rich Growth Stimulants for our war Ameoba are able to turn baby amoeba into full grown adults in the span of only a few months."
+ war_amoeba_tech_mutation_stimulators:0 "Amoeba Mutation Simulators"
+ war_amoeba_tech_mutation_stimulators:0 "Amoeba Mutation Simulators cause dramatic changes in war amoeba, one such mutation created a fearsome new subspecies, with more offensive capabilities and a thick biological armor that even out best weaponry would have trouble penetrating"
 
 ####################################
 # Ship sizes
