@@ -107,7 +107,7 @@ war_amoeba_centenarian = {
 		ship_piracy_suppression_add = 4
 	}
 	max_hitpoints = 2000
-	size_multiplier = 4
+	size_multiplier = 3
 	fleet_slot_size = 3
 	section_slots = { "mid" = { locator = "part1" } }
 	num_target_locators = 0

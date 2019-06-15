@@ -24,7 +24,10 @@ amoeba_hatchery = {
 		has_starbase_module = shipyard #if the starbase has a shipyard this is buildable
 	}
 
-	prerequisites = { "war_amoeba_tech_amoeba_training"}
+	potential = {
+		exists = owner
+		owner = { has_technology = "war_amoeba_tech_amoeba_training" }
+	}
 
 	resources = {
 		category = starbase_buildings
