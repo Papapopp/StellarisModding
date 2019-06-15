@@ -1,24 +1,36 @@
-﻿l_english:
+﻿####################################################
+#
+# War Amoeba English Localization (converts programming names to english names and descriptors to be used in game)
+#
+# Written by Wyatt Sanders and Jared Sager
+#
+####################################################
 
+l_english: 
+
+####################################
+# War Amoeba buildings 
+####################################
+
+sm_amoeba_hatchery:0 "Amoeba Hatchery"
 
 ####################################
 # Ship sizes
 ####################################
-war_amoeba:0 "war amoeba"
-war_amoeba_plural:0 "war amoebas"
 
-war_amoeba_mother:0 "mother war amoeba"
-war_amoeba_mother_plural:0 "mother war amoebas"
+war_amoeba:0 "War Amoeba"
+war_amoeba_plural:0 "War Amoebas"
 
-war_amoeba_centenarian:0 "centenarian war amoeba"
-war_amoeba_centenarian_plural:0 "centenarian war amoebas"
+war_amoeba_mother:0 "Mother War Amoeba"
+war_amoeba_mother_plural:0 "Mother War Amoebas"
 
-
-
+war_amoeba_centenarian:0 "Centenarian War Amoeba"
+war_amoeba_centenarian_plural:0 "Centenarian War Amoebas"
 
  ####################################
  # Anomaly Categories
  ####################################
+
  # FROM = planet scope
  # ROOT = ship scope
 
@@ -34,3 +46,4 @@ amoeba_eggs_found: "The astroid [From.GetName] is remarkably deformed, possessin
 war_amoeba_mod_anomaly.war_amoeba_egg_1.name: "Amoeba Eggs"
 war_amoeba_mod_anomaly.war_amoeba_egg_1.desc: "After detailed analysis, Officer [Root.GetLeaderName] has discovered that the strange cracked formations on the surface of [From.GetName] in fact are eggs! These eggs once contained babies of space amoeba, while the unborn eggs' larve were essentially useless, the fluid they were encased in has some interesting properties.\n\nThe viscosity and density of this fluid sludge is remarkable. It's an almost gaseous fluid that is packed with nutrients simular to the food we currently produce and eat.\n\nIn studying the eggs, the crew has made some exciting new findings that will undoubtedly aid us in our own research."
 war_amoeba_mod_anomaly.war_amoeba_egg_1.a: "Having amoeba food on hand could be useful"
+

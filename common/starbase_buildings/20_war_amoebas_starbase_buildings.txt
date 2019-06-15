@@ -1,8 +1,10 @@
-
-########################
-# War Amoeba buildings #
-########################
-
+####################################################
+#
+# War Amoeba buildings
+#
+# Written by Wyatt Sanders and Jared Sager
+#
+####################################################
 
 #modified copy of titan yards
 amoeba_hatchery = {
