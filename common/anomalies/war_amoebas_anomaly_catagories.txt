@@ -23,7 +23,7 @@ amoeba_eggs_category = {
 		}
 		modifier = {											# 	nations that have encountered amoebas before have double the chance of finding this anomaly 
 			factor =2 
-			owner = { 
+			from.owner = { 
 				has_country_flag = amoeba_encountered 
 			}
 		}
