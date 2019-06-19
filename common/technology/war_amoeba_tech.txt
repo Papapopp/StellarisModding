@@ -90,7 +90,9 @@ war_amoeba_tech_mutation_stimulators = {
 	category = { biology }	
 	prerequisites = { "war_amoeba_tech_growth_acceleration" "tech_gene_tailoring" }   # requires teir 2 for making ameobas and Gene Tailoring (modify pops) 
 	weight = @tier3weight2
-	
+	potential = {
+		host_has_dlc = "Distant Stars"
+	}
 	
 	weight_modifier = {
 		factor = 1 	# # more common or less common
