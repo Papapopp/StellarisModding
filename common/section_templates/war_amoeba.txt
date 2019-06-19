@@ -1,6 +1,6 @@
 # war amoeba section template
 ship_section_template = {
-	key = "war_amoeba_small_beige_blue" # used  to reference this template
+	key = "war_amoeba_small" # used  to reference this template
 	ship_size = war_amoeba # referencing the size it is compatible with
 	fits_on_slot = mid
 	entity = "space_amoeba_medium_entity" # reference the model that this section will use.
@@ -29,7 +29,7 @@ ship_section_template = {
 }
 # Mother war amoeba section template
 ship_section_template = {
-	key = "war_amoeba_large_beige_blue"
+	key = "war_amoeba_large"
 	ship_size = war_amoeba_mother
 	fits_on_slot = mid
 	entity = "space_amoeba_large_section_entity"
@@ -66,7 +66,7 @@ ship_section_template = {
 
 # War amoeba Centenarian section
 ship_section_template = {
-	key = "war_amoeba_centenarian_key"
+	key = "war_amoeba_centenarian"
 	ship_size = war_amoeba_centenarian
 	fits_on_slot = mid
 	entity = "space_amoeba_large_section_bright_entity"

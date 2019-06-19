@@ -2,11 +2,11 @@
 
 # Small War Amoeba
 ship_design = {
-	name = "NAME_Small_War_Organism_Blue" 
+	name = "NAME_War_Amoeba" 
 	ship_size = war_amoeba
 	
 	section = {
-		template = "war_amoeba_small_beige_blue" # Specifies the section template this design will use
+		template = "war_amoeba_small" # Specifies the section template this design will use
 		slot = "mid" # Where to put the section
 		
 		component = {
@@ -31,11 +31,11 @@ ship_design = {
 
 # Large War Amoeba w/ warp
 ship_design = {
-	name = "NAME_Great_War_Organism"
+	name = "NAME_War_Amoeba_Mother"
 	ship_size = war_amoeba_mother
 	
 	section = {
-		template = "war_amoeba_large_beige_blue"
+		template = "war_amoeba_large"
 		slot = "mid"
 		
 		component = {
@@ -68,7 +68,7 @@ ship_design = {
 	ship_size = war_amoeba_centenarian
 	
 	section = {
-		template = "war_amoeba_centenarian_key"
+		template = "war_amoeba_centenarian"
 		slot = "mid"
 		
 		component = {
