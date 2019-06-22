@@ -29,40 +29,41 @@ country_event = {
 			has_ethic = ethic_fanatic_spiritualist
             has_ethic = ethic_spiritualist
         }
+        any_owned_leader = {
+            leader_class = scientist
+            is_researching_area = society
+        }
 	}
 
-	immediate = { # designate/find the leader?
+	immediate = {
 		random_owned_leader = {
-            limit = {
-                AND = {
-                  	leader_class = scientist
-                  	is_researching_area = society
-                }
-            }
+			limit = {
+				AND = {
+                	leader_class = scientist
+                	is_researching_area = society
+            	}
+			}
+            
             save_event_target_as = researching_scientist_religious_discovery
         }
     }
 
 	option = {
 		name = war_amoeba_country.religious_discovery.congradulate
-		tooltip = {
-			event_target:researching_scientist_religious_discovery = {
-				add_trait = leader_trait_expertise_field_manipulation
-			}
+		event_target:researching_scientist_religious_discovery = {
+			add_trait = leader_trait_expertise_field_manipulation
 		}
 	}
 
 	option = {
 		name = war_amoeba_country.religious_discovery.excommunicate
-		tooltip = {
-        	tooltip = {
-        		event_target:researching_scientist_religious_discovery = {
-        			kill_leader = {
-        				show_notification = no
-        			}
-        		}
-		    }
-		}
+		
+        event_target:researching_scientist_religious_discovery = {
+        	kill_leader = {
+        		show_notification = no
+        	}
+        }
+        add_resource = { influence = 40 }
 	}
 	
  }

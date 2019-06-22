@@ -91,7 +91,7 @@ war_amoeba_tech_mutation_stimulators = {
 	prerequisites = { "war_amoeba_tech_growth_acceleration" "tech_gene_tailoring" }   # requires teir 2 for making ameobas and Gene Tailoring (modify pops) 
 	weight = @tier3weight2
 	potential = {
-		host_has_dlc = "distars"
+		host_has_dlc = "Distant Stars Story Pack"
 	}
 	
 	weight_modifier = {
