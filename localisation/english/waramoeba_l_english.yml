@@ -71,3 +71,12 @@ war_amoeba_mod_anomaly.war_amoeba_egg_1.name: "Amoeba Eggs"
 war_amoeba_mod_anomaly.war_amoeba_egg_1.desc: "After detailed analysis, Officer [Root.GetLeaderName] has discovered that the strange cracked formations on the surface of [From.GetName] in fact are eggs! These eggs once contained babies of space amoeba, while the unborn eggs' larve were essentially useless, the fluid they were encased in has some interesting properties.\n\nThe viscosity and density of this fluid sludge is remarkable. It's an almost gaseous fluid that is packed with nutrients simular to the food we currently produce and eat.\n\nIn studying the eggs, the crew has made some exciting new findings that will undoubtedly aid us in our own research."
 war_amoeba_mod_anomaly.war_amoeba_egg_1.a: "Having amoeba food on hand could be useful"
 
+####################################
+# Country Events
+####################################
+
+ # religious discovery
+war_amoeba_country.religious_discovery.name: "name"
+war_amoeba_country.religious_discovery.desc: "description"
+war_amoeba_country.religious_discovery.congradulate: "congrats"
+war_amoeba_country.religious_discovery.excommunicate: "kick out leader"

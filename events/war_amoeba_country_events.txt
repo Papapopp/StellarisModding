@@ -8,7 +8,7 @@
 
 namespace = war_amoeba_country
 
-
+# religious discovery of War Amoeba
 country_event = { 
 	id = war_amoeba_country.religious_discovery
 	title = "war_amoeba_country.religious_discovery.name"
@@ -44,7 +44,7 @@ country_event = {
     }
 
 	option = {
-		name = congradulate.religious_discovery
+		name = war_amoeba_country.religious_discovery.congradulate
 		tooltip = {
 			event_target:researching_scientist_religious_discovery = {
 				add_trait = leader_trait_expertise_field_manipulation
@@ -53,7 +53,7 @@ country_event = {
 	}
 
 	option = {
-		name = excommunicate.religious_discovery
+		name = war_amoeba_country.religious_discovery.excommunicate
 		tooltip = {
         	tooltip = {
         		event_target:researching_scientist_religious_discovery = {
