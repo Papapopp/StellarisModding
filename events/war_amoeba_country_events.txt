@@ -1,3 +1,14 @@
+####################################################
+#
+# War Amoeba Country Events
+#
+# Written by Wyatt Sanders and Jared Sager
+#
+####################################################
+
+namespace = war_amoeba_country
+
+
 country_event = { 
 	id = war_amoeba_country.religious_discovery
 	title = "war_amoeba_country.religious_discovery.name"
