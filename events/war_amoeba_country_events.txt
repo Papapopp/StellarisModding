@@ -21,47 +21,34 @@ country_event = {
 	}
 
 	immediate = { # designate/find the leader?
-        if = {
-            limit = { exists = event_target:researchingscientist }
-            event_target:researchingscientist = {
-                save_global_event_target_as = researchingscientistreligious_discovery
+		random_owned_leader = {
+            limit = {
+                AND = {
+                  	leader_class = scientist
+                  	is_researching_area = biology
+                }
             }
+            save_event_target_as = researching_scientist_religious_discovery
         }
     }
 
 	option = {
 		name = congradulate.religious_discovery
 		tooltip = {
-			random_owned_leader = {
-            	if = {
-                	limit = {
-                  		AND = {
-                  			leader_class = scientist
-                  	    	is_researching_area = biology
-                  		}
-                	}
-                	add_trait = leader_trait_expertise_field_manipulation
-            	}
-        	}
+			event_target:researching_scientist_religious_discovery = {
+				add_trait = leader_trait_expertise_field_manipulation
+			}
 		}
 	}
 
 	option = {
 		name = excommunicate.religious_discovery
 		tooltip = {
-			random_owned_leader = {
-            	if = {
-                	limit = {
-                  		AND = {
-                  			leader_class = scientist
-                  	    	is_researching_area = biology
-                  		}
-                	}
-                	kill_leader = {
-                		type = scientist
-            		}
-            	}
-        	}
+        	tooltip = {
+        		kill_leader = {
+        			event_target:researching_scientist_religious_discovery
+        		}
+		    }
 		}
 	}
 	
