@@ -1,4 +1,4 @@
-﻿####################################################
+####################################################
 #
 # War Amoeba English Localization (converts programming names to english names and descriptors to be used in game)
 #
@@ -76,7 +76,7 @@ war_amoeba_mod_anomaly.war_amoeba_egg_1.a: "Having amoeba food on hand could be 
 ####################################
 
  # religious discovery
-war_amoeba_country.religious_discovery.name: "name"
-war_amoeba_country.religious_discovery.desc: "description"
-war_amoeba_country.religious_discovery.congradulate: "congrats"
-war_amoeba_country.religious_discovery.excommunicate: "kick out leader"
+war_amoeba_country.religious_discovery.name: "Submit To Revelation And New Divine Servitude" # Strands ;)
+war_amoeba_country.religious_discovery.desc: "[researching_scientist_religious_discovery.GetName] claims to have been visited by the divine,[researching_scientist_religious_discovery.GetName] immidiately started writing with both hand simultaniously in a journal, titled 'Composition. Creation. Children. Change.' It seems to contain an entire genome for a new species? \n\n which is... disturbing, at best.\nTerrifying at worst."
+war_amoeba_country.religious_discovery.congradulate: "Creation begins again, we shall answer this divine calling!"
+war_amoeba_country.religious_discovery.excommunicate: "Execute the Heritic!"
