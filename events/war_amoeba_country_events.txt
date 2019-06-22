@@ -45,8 +45,10 @@ country_event = {
 		name = excommunicate.religious_discovery
 		tooltip = {
         	tooltip = {
-        		kill_leader = {
-        			event_target:researching_scientist_religious_discovery
+        		event_target:researching_scientist_religious_discovery = {
+        			kill_leader = {
+        				show_notification = no
+        			}
         		}
 		    }
 		}
