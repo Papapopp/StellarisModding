@@ -36,7 +36,7 @@ country_event = {
             limit = {
                 AND = {
                   	leader_class = scientist
-                  	is_researching_area = biology
+                  	is_researching_area = society
                 }
             }
             save_event_target_as = researching_scientist_religious_discovery
