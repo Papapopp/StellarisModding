@@ -56,6 +56,24 @@ country_event = {
 				add_trait = leader_trait_expertise_biology
 			}
 		}
+		owner = {
+			if = {
+				limit = {
+					has_tech_option = war_amoeba_tech_amoeba_training
+				}
+				add_tech_progress = {
+					tech = war_amoeba_tech_amoeba_training
+					progress = 0.40
+				}
+			}
+			else = {
+				add_research_option = war_amoeba_tech_amoeba_training
+				add_tech_progress = {
+					tech = war_amoeba_tech_amoeba_training
+					progress = 0.10
+				}
+			}
+		}
 	}
 
 	option = {
