@@ -43,7 +43,7 @@ country_event = {
                 	is_researching_area = society
             	}
 			}
-            
+            log = "[This.GetName] is the guy who'll get the trait"
             save_event_target_as = researching_scientist_religious_discovery
         }
     }
@@ -51,10 +51,9 @@ country_event = {
 	option = {
 		name = war_amoeba_country.religious_discovery.congradulate
 		event_target:researching_scientist_religious_discovery = {
-			if = { 
-				limit = { has_leader_flag = gained_leader_trait_expertise_biology }
+			
 				add_trait = leader_trait_expertise_biology
-			}
+			
 		}
 		owner = {
 			if = {
@@ -92,8 +91,8 @@ country_event = {
 # Amoeba pacification tech progress event
 country_event = { 
 	id = war_amoeba_country.pacification
-	title = war_amoeba_country.pacification.name
-	desc = war_amoeba_country.pacification.desc
+	title = "war_amoeba_country.pacification.name"
+	desc = "war_amoeba_country.pacification.desc"
 
 	picture = GFX_evt_genetic_modification
 	location = from
