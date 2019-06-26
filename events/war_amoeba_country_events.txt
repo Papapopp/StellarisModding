@@ -14,7 +14,7 @@ country_event = {
 	title = "war_amoeba_country.religious_discovery.name"
 	desc = "war_amoeba_country.religious_discovery.desc"
 
-	#show_sound = event_scanner
+	show_sound = event_mystic_reveal_02
 	picture = GFX_evt_satellite_in_orbit
 	location = from
 	trackable = yes
@@ -87,8 +87,39 @@ country_event = {
         add_resource = { influence = 40 }
 	}
 	
- }
+}
 
+# Amoeba pacification tech progress event
+country_event = { 
+	id = war_amoeba_country.pacification
+	title = war_amoeba_country.pacification.name
+	desc = war_amoeba_country.pacification.desc
+
+	picture = GFX_evt_genetic_modification
+	location = from
+	show_sound = event_scanner_03
+
+	hide_window = no
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		has_modifier = pacified_amoebas
+	}
+
+	option = {
+		name = INTERESTING
+		IF = {
+			limit = {
+				NOR = {
+					has_tech_option = war_amoeba_tech_amoeba_training
+					has_technology = war_amoeba_tech_amoeba_training
+				}
+			}
+			add_research_option = war_amoeba_tech_amoeba_training
+		}
+	}
+}
 
 ##########################
 # HOW TO MAKE AN EVENT #
