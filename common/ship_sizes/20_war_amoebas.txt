@@ -4,7 +4,7 @@
 # War Amoebas #
 ###############
 
-# This file defines all of the ship size categorises for teh amoebas.
+# This file defines all of the ship size categorises for the amoebas.
 war_amoeba = { # Copy of space_amoeba in 07_space_monsters.txt 
 	graphical_culture = no #Do not use the graphical culture of the country it is built by (mamilian, reptilian, etc).
 	entity = space_amoeba_entity #Since there is no model named "war_amoeba_entity" that the game would automatically look for, this specifies that we are using the regular amoeba's model.
@@ -58,7 +58,7 @@ war_amoeba = { # Copy of space_amoeba in 07_space_monsters.txt
 	}
 }
 
-# modified copy of Space Amoeba mother
+# modified copy of Space Amoeba Mother
 war_amoeba_mother = {
 	entity = space_amoeba_mother_entity
 	graphical_culture = no
@@ -91,7 +91,8 @@ war_amoeba_mother = {
 
 	prerequisites = { "war_amoeba_tech_growth_acceleration" }
 
-	possible_starbase = {#you need a hatchery to spawn amoeba
+	# A hatchery is required to spawn amoeba
+	possible_starbase = {
 		has_starbase_building = amoeba_hatchery
 	}
 
@@ -145,7 +146,7 @@ war_amoeba_centenarian = {
 
 	prerequisites = { "war_amoeba_tech_mutation_stimulators" }
 
-	possible_starbase = { #you need a hatchery to spawn amoeba
+	possible_starbase = {
 		has_starbase_building = amoeba_hatchery
 	}
 
