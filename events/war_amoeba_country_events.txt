@@ -51,7 +51,28 @@ country_event = {
 	option = {
 		name = war_amoeba_country.religious_discovery.congradulate
 		event_target:researching_scientist_religious_discovery = {
-			add_trait = leader_trait_expertise_field_manipulation
+			if = { 
+				limit = { has_leader_flag = gained_leader_trait_expertise_biology }
+				add_trait = leader_trait_expertise_biology
+			}
+		}
+		owner = {
+			if = {
+				limit = {
+					has_tech_option = war_amoeba_tech_amoeba_training
+				}
+				add_tech_progress = {
+					tech = war_amoeba_tech_amoeba_training
+					progress = 0.40
+				}
+			}
+			else = {
+				add_research_option = war_amoeba_tech_amoeba_training
+				add_tech_progress = {
+					tech = war_amoeba_tech_amoeba_training
+					progress = 0.10
+				}
+			}
 		}
 	}
 
