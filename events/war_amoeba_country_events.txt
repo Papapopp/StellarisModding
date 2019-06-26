@@ -14,7 +14,7 @@ country_event = {
 	title = "war_amoeba_country.religious_discovery.name"
 	desc = "war_amoeba_country.religious_discovery.desc"
 
-	show_sound = event_mystic_reveal_02
+	show_sound = event_mystic_reveal
 	picture = GFX_evt_satellite_in_orbit
 	location = from
 	trackable = yes
