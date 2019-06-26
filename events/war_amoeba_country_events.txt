@@ -10,9 +10,9 @@ namespace = war_amoeba_country
 
 # religious discovery of War Amoeba
 country_event = { 
-	id = war_amoeba_country.religious_discovery
-	title = "war_amoeba_country.religious_discovery.name"
-	desc = "war_amoeba_country.religious_discovery.desc"
+	id = war_amoeba_country.1
+	title = "war_amoeba_country.1.name"
+	desc = "war_amoeba_country.1.desc"
 
 	show_sound = event_mystic_reveal
 	picture = GFX_evt_satellite_in_orbit
@@ -88,11 +88,11 @@ country_event = {
 	
 }
 
-# Amoeba pacification tech progress event
+# Amoeba pacification tech option event
 country_event = { 
-	id = war_amoeba_country.pacification
-	title = "war_amoeba_country.pacification.name"
-	desc = "war_amoeba_country.pacification.desc"
+	id = war_amoeba_country.2
+	title = "war_amoeba_country.2.name"
+	desc = "war_amoeba_country.2.desc"
 
 	picture = GFX_evt_genetic_modification
 	location = from
