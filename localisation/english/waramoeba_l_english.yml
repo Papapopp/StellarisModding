@@ -76,10 +76,10 @@ war_amoeba_mod_anomaly.war_amoeba_egg_1.a: "Having amoeba food on hand could be 
 ####################################
 
 # religious discovery
-war_amoeba_country.religious_discovery.name: "Submit To Revelation And New Divine Servitude" # Strands ;)
-war_amoeba_country.religious_discovery.desc: "[researching_scientist_religious_discovery.GetName] claims to have been visited by the divine,[researching_scientist_religious_discovery.GetName] immidiately started writing with both hand simultaniously in a journal, titled 'Composition. Creation. Children. Change.' It seems to contain an entire genome for a new species? \n\n which is... disturbing, at best.\nTerrifying at worst."
-war_amoeba_country.religious_discovery.congradulate: "Creation begins again, we shall answer this divine calling!"
-war_amoeba_country.religious_discovery.excommunicate: "Execute the Heritic!"
+war_amoeba_country.1.name: "Submit To Revelation And New Divine Servitude" # Strands ;)
+war_amoeba_country.1.desc: "[researching_scientist_religious_discovery.GetName] claims to have been visited by the divine,[researching_scientist_religious_discovery.GetName] immidiately started writing with both hand simultaniously in a journal, titled 'Composition. Creation. Children. Change.' It seems to contain an entire genome for a new species? \n\n which is... disturbing, at best.\nTerrifying at worst."
+war_amoeba_country.1.congradulate: "Creation begins again, we shall answer this divine calling!"
+war_amoeba_country.1.excommunicate: "Execute the Heritic!"
 
-war_amoeba_country.pacification.name: "Amoeba Training initiative"
-war_amoeba_country.pacification.desc: "after completing the pacification process our scientists are now looking into additional aplications of the technology \n\n including possibly using them to reinforce our navy"
+war_amoeba_country.2.name: "Amoeba Training initiative"
+war_amoeba_country.2.desc: "Close study of the Amoeba has lead to advances in biology and we have started to train them to respond to different signals \n\nScientists can now issue simple commands such as follow or stop. There is a possibility that the Amoebas' training could be advanced enough to be used as a way to transport resources cheaply or possibly to reinforce our navy..."
