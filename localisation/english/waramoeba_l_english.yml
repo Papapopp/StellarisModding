@@ -81,5 +81,5 @@ war_amoeba_country.religious_discovery.desc: "[researching_scientist_religious_d
 war_amoeba_country.religious_discovery.congradulate: "Creation begins again, we shall answer this divine calling!"
 war_amoeba_country.religious_discovery.excommunicate: "Execute the Heritic!"
 
-war_amoeba_country.pacification.name: "name pacification"
-war_amoeba_country.pacification.desc: "desc pacification"
+war_amoeba_country.pacification.name: "Amoeba Training initiative"
+war_amoeba_country.pacification.desc: "after completing the pacification process our scientists are now looking into additional aplications of the technology \n\n including possibly using them to reinforce our navy"
