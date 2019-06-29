@@ -96,7 +96,7 @@ country_event = {
 
 	picture = GFX_evt_genetic_modification
 	location = from
-	show_sound = event_scanner_03
+	show_sound = event_scanner
 
 	hide_window = no
 	is_triggered_only = yes
