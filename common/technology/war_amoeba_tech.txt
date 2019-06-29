@@ -14,7 +14,7 @@
 # ##########################
 
 war_amoeba_tech_amoeba_training = {
-	cost = @tier1cost2
+	cost = @tier1cost1
 	area = society
 	tier = 1
 	category = { biology }	

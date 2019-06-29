@@ -50,7 +50,7 @@ war_amoeba = { # Copy of space_amoeba in 07_space_monsters.txt
 	resources = {
 		category = ships
 		cost {
-			food = 10
+			food = 150
 		}
 		upkeep = {
 			food = 1
@@ -105,10 +105,10 @@ war_amoeba_mother = {
 	resources = {
 		category = ships
 		cost {
-			food = 25
+			food = 700
 		}
 		upkeep = {
-			food = 1
+			food = 5
 		}
 	}
 }
@@ -161,10 +161,10 @@ war_amoeba_centenarian = {
 	resources = {
 		category = ships
 		cost {
-			food = 50
+			food = 3000
 		}
 		upkeep = {
-			food = 1
+			food = 20
 		}
 	}
 }

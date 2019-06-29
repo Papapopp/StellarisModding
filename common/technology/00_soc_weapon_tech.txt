@@ -4,15 +4,15 @@
 # Biological Weapons
 # ##################
 
-# Space Amoeba Strike Craft (now available as a normal  tier 2 tech)
+# Space Amoeba Strike Craft
 tech_amoeba_strike_craft_1 = {
 	area = society
 	cost = @tier2cost3
 	tier = 2
 	category = { biology }
 	ai_update_type = military
-	#weight = @tier2weight1
-	weight = 0
+	weight = @tier2weight1 #(now available as a normal tier 2 tech)
+	#weight = 0
 
 	weight_modifier = {
 		modifier = {
