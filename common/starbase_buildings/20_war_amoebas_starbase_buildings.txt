@@ -11,20 +11,14 @@ amoeba_hatchery = {
 	icon = "GFX_spaceport_module_hydroponic_farms" #use picture for hydroponic farms (looks like a hatchery -ish)
 	construction_days = 1 #change to 540 days normal buildings are 360 days to build adding a little time for weird biological stuff needed to hatch space ameobas
 	
-	# titan remnant (checks for prereq techs)
-	#potential = { 
-		#exists = owner
-		#owner = { has_technology = tech_titans }			
-	#}
-	
-	possible = {
-		# titan remnant (checks for citadel)
+	#possible = {
+	# titan remnant (checks for citadel)
 	#	custom_tooltip = {
 	#		fail_text = "requires_citadel"
 	#		has_starbase_size >= starbase_citadel
 	#	}
-		has_starbase_module = shipyard #if the starbase has a shipyard this is buildable
-	}
+	#	has_starbase_module = shipyard #if the starbase has a shipyard this is buildable
+	#}
 
 	potential = {
 		exists = owner
