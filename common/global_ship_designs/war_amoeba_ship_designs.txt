@@ -26,7 +26,8 @@ ship_design = {
 			template = "AUTO_REPAIR"
 		}		
 	}
-	required_component="BIO_DRIVE" # Will always be forced to have this component to be built.
+
+	required_component = "BIO_DRIVE" # Will always be forced to have this component to be built.
 }
 
 # Large War Amoeba w/ warp
