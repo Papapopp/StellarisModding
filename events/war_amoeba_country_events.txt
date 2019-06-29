@@ -10,7 +10,7 @@ namespace = war_amoeba_country
 
 # religious discovery of War Amoeba
 country_event = { 
-	id = war_amoeba_country.1
+	id = war_amoeba_country.1 #event ids need to be in the form namespace.number
 	title = "war_amoeba_country.1.name"
 	desc = "war_amoeba_country.1.desc"
 
