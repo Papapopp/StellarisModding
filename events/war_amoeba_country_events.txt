@@ -10,7 +10,7 @@ namespace = war_amoeba_country
 
 # religious discovery of War Amoeba
 country_event = { 
-	id = war_amoeba_country.1 #event ids need to be in the form namespace.number
+	id = war_amoeba_country.1 # event ids need to be in the form namespace.number
 	title = "war_amoeba_country.1.name"
 	desc = "war_amoeba_country.1.desc"
 
@@ -49,7 +49,7 @@ country_event = {
     }
 
 	option = {
-		name = war_amoeba_country.religious_discovery.congradulate
+		name = war_amoeba_country.1.congradulate
 		event_target:researching_scientist_religious_discovery = {
 			
 				add_trait = leader_trait_expertise_biology
@@ -76,7 +76,7 @@ country_event = {
 	}
 
 	option = {
-		name = war_amoeba_country.religious_discovery.excommunicate
+		name = war_amoeba_country.1.excommunicate
 		
         event_target:researching_scientist_religious_discovery = {
         	kill_leader = {
