@@ -23,7 +23,7 @@ ship_design = {
 		}
 		component = {
 			slot = "AUX_UTILITY_1"
-			template = "AUTO_REPAIR"
+			template = "AMOEBA_REPAIR"
 		}		
 	}
 
@@ -57,7 +57,7 @@ ship_design = {
 		}
 		component = {
 			slot = "AUX_UTILITY_1"
-			template = "AUTO_REPAIR"
+			template = "AMOEBA_REPAIR"
 		}
 	}
 	required_component="BIO_DRIVE"

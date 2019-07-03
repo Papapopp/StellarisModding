@@ -17,8 +17,7 @@ war_amoeba_tech_amoeba_training = {
 	cost = @tier1cost1
 	area = society
 	tier = 1
-	category = { biology }	
-	prerequisites = { "tech_genome_mapping" }  # change later
+	category = { biology }
 	#weight = @tier1weight2
 	weight = 0
 

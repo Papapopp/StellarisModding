@@ -37,7 +37,7 @@ ship_section_template = {
 	
 	component_slot = {
 		name = "LARGE_GUN_01"
-		slot_size = small
+		slot_size = large
 		slot_type = weapon
 		locatorname = "gun_01"
 	}
