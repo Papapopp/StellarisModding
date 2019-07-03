@@ -13,6 +13,7 @@ l_english:
 ####################################
 
 sm_amoeba_hatchery:0 "Amoeba Hatchery"
+sm_amoeba_hatchery_desc:0 "Through laborious environmental controls and a constant supply of nutrients, these hatcheries allow amoeba to breed, grow and train much faster than in the vacuum of space."
 
 ####################################
 # War Amoeba Technology
@@ -24,7 +25,7 @@ sm_amoeba_hatchery:0 "Amoeba Hatchery"
 
 # War Amoeba ship unlocks
 war_amoeba_tech_amoeba_training:0 "Amoeba Training"
-war_amoeba_tech_amoeba_training_desc:0 "A small subset of the Ameoba population respond suprisingly well to military commands. It seems this, War-Brood, can be trained as organic craft for our navy."
+war_amoeba_tech_amoeba_training_desc:0 "A small subset of the Ameoba population respond suprisingly well to military commands. It seems this war-brood can be trained and outfitted as organic craft for our navy."
 war_amoeba_tech_growth_acceleration:0 "Amoeba Growth Acceleration"
 war_amoeba_tech_growth_acceleration_desc:0 "Nutrient-rich Growth Stimulants for our war Ameoba are able to turn baby amoeba into full grown adults in the span of only a few months."
 war_amoeba_tech_mutation_stimulators:0 "Amoeba Mutation Simulators"
