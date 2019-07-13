@@ -112,7 +112,7 @@ war_amoeba_mother = {
 	resources = {
 		category = ships
 		cost {
-			food = 700
+			food = 1000
 		}
 		upkeep = {
 			food = 5
