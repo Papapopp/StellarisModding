@@ -1,0 +1,724 @@
+# victorious admiral gains dragonslayer trait
+country_event = {
+	id = leviathans.670
+	title = leviathans.670.name
+	desc = {
+		text = leviathans.670.desc
+		trigger = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			fromfrom = {
+				exists = leader
+			}
+		}
+	}
+	desc = {
+		text = leviathans.670.desc.noleader
+		trigger = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			fromfrom = {
+				NOT = { exists = leader }
+			}
+		}
+	}
+	desc = {
+		text = leviathans.670.desc.gesta
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+			fromfrom = {
+				NOT = { exists = leader }
+			}
+		}
+	}
+	picture = GFX_evt_space_dragon
+	location = fromfrom
+	show_sound = event_mystic_reveal
+
+	is_triggered_only = yes
+
+	trigger = {
+		from = {
+			is_country_type = guardian_dragon
+			NOT = { has_country_flag = rubricator_dragon_country }
+		}
+		#fromfromfrom = {
+		#	has_fleet_flag = dragon_fleet
+		#}
+	}
+
+	planet_event = {
+	id = leviathans.662
+	hide_window = yes
+
+	mean_time_to_happen = {
+		years = 50
+	}
+
+	trigger = {
+		has_planet_flag = hoard_planet
+		#has_deposit = d_guardian_dragon_hoard
+		NOT = {
+			has_planet_flag = deegged
+		}
+		has_mining_station = yes
+		exists = controller
+		controller = {
+			is_country_type = default
+		}
+	}
+
+	immediate = {
+		set_planet_flag = deegged
+		controller = {
+			country_event = { id = leviathans.663 }
+		}
+	}
+}
+
+# Dragon Hoard event - Egg
+country_event = {
+	id = leviathans.663
+	title = "leviathans.661.name"
+	desc = "leviathans.661.desc"
+	picture = GFX_evt_archaeological_dig
+	location = root
+	show_sound = event_mystic_reveal
+	trackable = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = leviathans.661.a
+		custom_tooltip = leviathans.661.a.tooltip
+		capital_scope = {
+			enable_special_project = {
+				name = "DRAGON_INCUBATION_PROJECT"
+				location = this
+				owner = root
+			}
+		}
+	}
+
+	option = {
+		name = leviathans.661.b
+		custom_tooltip = leviathans.661.b.tooltip
+		add_resource = { influence = 300 }
+	}
+}
+
+# Egg incubated
+planet_event = {
+	id = leviathans.664
+	title = leviathans.664.name
+	desc = leviathans.664.desc
+	picture = GFX_evt_space_dragon
+	location = root
+	show_sound = event_mystic_reveal
+
+	is_triggered_only = yes
+
+	immediate = {
+		create_fleet = {
+			name = "NAME_Ether_Hatchling"
+			settings = { 
+				can_upgrade = no 
+				can_change_composition = no 
+				can_change_leader = no 
+				uses_naval_capacity = no
+				spawn_debris = no
+			}				
+			effect = {
+				set_owner = root.owner
+				create_ship_design = {
+					design = NAME_Dragonspawn
+				}
+				create_ship = {
+					design = last_created_design
+					name = "NAME_Scile"
+					prefix = no
+					upgradable = no
+				}
+				set_location = root
+			}
+		}
+		owner = { set_country_flag = hatched_dragon }
+	}
+
+	option = {
+		name = leviathans.664.a
+		custom_tooltip = leviathans.664.a.tooltip
+	}
+}
+
+
+
+
+
+#event chain stuff needs research
+
+
+
+# technosphere stuff
+country_event = {
+	id = leviathans.1040
+	title = leviathans.1030.name
+	desc = {
+		trigger = {
+			switch = {
+				trigger = has_country_flag
+				technosphere_sabotaged = { text = leviathans.1040.desc.alt }
+				technosphere_studied = { text = leviathans.1040.desc.detail }
+				default = { text = leviathans.1040.desc }
+			}
+		}
+	}
+	picture = GFX_evt_technosphere
+	show_sound = event_super_explosion
+	location = fromfrom
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			AND = {
+				has_country_flag = technosphere_sabotaged
+				fromfrom = { owner = { is_country_type = guardian_sphere } }
+			}
+			AND = {
+				from = {
+					is_country_type = guardian_sphere
+				}
+			}
+		}
+	}
+
+	immediate = {
+		fromfrom = {
+			solar_system = {
+				save_event_target_as = technosphere_location
+				save_event_target_as = slain_guardian_system
+			}
+		}
+		every_country = {
+			limit = {
+				is_country_type = default
+				has_event_chain = curator_poi_chain
+				event_target:slain_guardian_system = {
+					is_point_of_interest = {
+						id = curator_poi_technosphere
+						event_chain = curator_poi_chain
+						owner = prev
+					}
+				}
+			}
+			remove_point_of_interest = curator_poi_technosphere
+			end_curator_chain = yes
+		}
+		every_country = {
+			limit = {
+				is_country_type = default
+				has_event_chain = technosphere_chain
+			}
+			end_event_chain = technosphere_chain
+		}
+		every_country = {
+			limit = {
+				NOR = {
+					is_same_value = root
+					is_hostile = event_target:guardian_technosphere_country
+				}
+				is_country_type = default
+				OR = {
+					has_modifier = infinity_calculations
+					has_modifier = technosphere_praising
+					has_country_flag = guardians_technosphere_encountered
+				}
+			}
+			country_event = { id = leviathans.1041 }
+		}
+	}
+
+	after = {
+		if = {
+			limit = {
+				has_modifier = infinity_calculations
+			}
+			remove_modifier = infinity_calculations
+		}
+		if = {
+			limit = {
+				has_modifier = technosphere_praising
+			}
+			remove_modifier = technosphere_praising
+		}
+	}
+
+	option = {
+		name = leviathans.1040.a
+		add_monthly_resource_mult = {
+			resource = influence
+			value = @tier5influencereward
+			min = @tier5influencemin
+			max = @tier5influencemax
+		}
+		add_monthly_resource_mult = {
+			resource = minerals
+			value = @tier5materialreward
+			min = @tier5materialmin
+			max = @tier5materialmax
+		}
+	}
+	option = {
+		name = leviathans.1040.c
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				has_technology = tech_robotic_workers
+				has_technology = tech_droid_workers
+				has_technology = tech_synthetic_workers
+				has_technology = tech_synthetic_leaders
+			}
+		}
+		add_research_option = tech_robotic_workers
+		add_tech_progress = {
+			tech = tech_robotic_workers
+			progress = 0.50
+		}
+	}
+	option = {
+		name = leviathans.1040.c
+		trigger = {
+			has_technology = tech_robotic_workers
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				has_technology = tech_droid_workers
+				has_technology = tech_synthetic_workers
+				has_technology = tech_synthetic_leaders
+			}
+		}
+		add_research_option = tech_droid_workers
+		add_tech_progress = {
+			tech = tech_droid_workers
+			progress = 0.50
+		}
+	}
+	option = {
+		name = leviathans.1040.c
+		trigger = {
+			has_technology = tech_robotic_workers
+			has_technology = tech_droid_workers
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				has_technology = tech_synthetic_workers
+				has_technology = tech_synthetic_leaders
+			}
+		}
+		add_research_option = tech_synthetic_workers
+		add_tech_progress = {
+			tech = tech_synthetic_workers
+			progress = 0.50
+		}
+	}
+	option = {
+		name = leviathans.1040.c
+		trigger = {
+			has_technology = tech_robotic_workers
+			has_technology = tech_droid_workers
+			has_technology = tech_synthetic_workers
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				has_technology = tech_synthetic_leaders
+			}
+		}
+		add_research_option = tech_synthetic_leaders
+		add_tech_progress = {
+			tech = tech_synthetic_leaders
+			progress = 0.50
+		}
+	}
+}
+
+#Investigating the Technosphere
+country_event = {
+	id = leviathans.1050
+	title = leviathans.1050.name
+	desc = leviathans.1050.desc
+	picture = GFX_evt_technosphere
+	show_sound = event_sensor_ping
+	location = event_target:technosphere_ship
+	trackable = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		exists = event_target:technosphere_ship
+		is_ai = no
+		has_country_flag = guardians_technosphere_encountered
+		any_system = {
+			has_star_flag = guardians_technosphere_system
+			any_ship_in_system = {
+				exists = owner
+				owner = {
+					is_country_type = guardian_sphere
+				}
+			}
+		}
+		NOR = {
+			has_country_flag = worm_events_available
+			event_target:guardian_technosphere_country = {
+				is_hostile = root
+			}
+		}
+	}
+
+	immediate = {
+		event_target:guardian_technosphere_country = {
+			random_owned_ship = {
+				limit = {
+					is_ship_size = sphere
+				}
+				save_event_target_as = technosphere_location
+			}
+		}
+		end_event_chain = technosphere_chain
+	}
+
+	option = {
+		name = FASCINATING
+		enable_special_project = {
+			name = "TECHNOSPHERE_PROJECT"
+			location = event_target:technosphere_ship
+			owner = root
+		}
+	}
+	option = {
+		name = NOTIME
+		add_resource = { influence = 50 }
+	}
+}
+
+#Succeeded in researching the Technosphere
+country_event = {
+	id = leviathans.1051
+	title = leviathans.1050.name
+	desc = leviathans.1051.desc
+	picture = GFX_evt_technosphere
+	show_sound = event_mystic_reveal
+	location = event_target:technosphere_ship
+	trackable = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		exists = event_target:technosphere_ship
+		NOT = { has_country_flag = worm_events_available }
+	}
+
+	immediate = {
+		set_country_flag = technosphere_studied
+		event_target:guardian_technosphere_country = {
+			random_owned_ship = {
+				limit = {
+					is_ship_size = sphere
+				}
+				save_event_target_as = technosphere_location
+			}
+		}
+	}
+
+	option = {
+		name = leviathans.1051.a
+		trigger = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+		}
+		hidden_effect = {
+			country_event = { id = leviathans.1055 }
+		}
+	}
+	option = {
+		name = leviathans.1051.c #praise it as your god
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_spiritualist
+			}
+		}
+		add_modifier = {
+			modifier = technosphere_praising
+			days = -1
+		}
+	}
+	option = {
+		name = leviathans.1051.b #hack it
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_materialist
+			}
+		}
+		enable_special_project = {
+			name = TECHNOSPHERE_HACKING
+			location = event_target:technosphere_ship
+			owner = root 
+		}
+	}
+	option = {
+		name = leviathans.1051.d #sabotage it
+		#custom_tooltip = leviathans.1051.d.tooltip
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_militarist
+			}
+		}
+		hidden_effect = {
+			set_country_flag = technosphere_sabotaged
+		}
+		event_target:technosphere_ship = {
+			enable_special_project = {
+				name = TECHNOSPHERE_DESTRUCTION
+				location = this
+				owner = root 
+			}
+		}
+	}
+	option = {
+		name = leviathans.1051.e #hack it - Gestalt Consciousness
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+		}
+		enable_special_project = {
+			name = TECHNOSPHERE_HACKING
+			location = event_target:technosphere_ship
+			owner = root 
+		}
+	}
+}
+
+#Hacking the technosphere - success
+country_event = {
+	id = leviathans.1052
+	title = leviathans.1050.name
+	desc = {
+		trigger = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+		}
+		text = leviathans.1052.desc
+	}
+	desc = {
+		trigger = { has_ethic = ethic_gestalt_consciousness }
+		text = leviathans.1052.gestalt.desc
+	}
+	picture = GFX_evt_technosphere
+	show_sound = event_ai_started
+	location = event_target:technosphere_ship
+	is_triggered_only = yes
+
+	trigger = {
+		exists = event_target:technosphere_ship
+	}
+
+	immediate = {
+		event_target:guardian_technosphere_country = {
+			random_owned_ship = {
+				limit = {
+					is_ship_size = sphere
+				}
+				save_event_target_as = technosphere_location
+			}
+		}
+	}
+	after = {
+		add_modifier = {
+			modifier = infinity_calculations_hacked
+			days = -1
+		}
+		event_target:technosphere_location = {
+			solar_system = {
+				save_event_target_as = slain_guardian_system
+			}
+			fleet = {
+				destroy_fleet = this
+			}
+		}
+		hidden_effect = {
+			country_event = { id = leviathans.1039 }
+		}
+	}
+	option = {
+		name = leviathans.1052.a
+		give_technology = { tech = tech_sapient_ai }
+		trigger = {
+			NOT = {
+				has_technology = tech_sapient_ai
+			}
+		}
+	}
+	option = {
+		name = leviathans.1052.a
+		trigger = {
+			has_technology = tech_sapient_ai
+			NOT = {
+				has_technology = tech_zero_point_power
+			}
+		}
+		give_technology = { tech = tech_zero_point_power }
+	}
+	option = {
+		name = leviathans.1052.a
+		trigger = {
+			has_technology = tech_sapient_ai
+			has_technology = tech_zero_point_power
+		}
+		add_monthly_resource_mult = {
+			resource = society_research
+			value = 24
+			min = 1000
+			max = 5000
+		}
+	}
+}
+
+#Hacking the technosphere - fail
+country_event = {
+	id = leviathans.1053
+	title = sphere
+	desc = leviathans.1053.desc 
+	is_triggered_only = yes
+	diplomatic = yes
+
+	trigger = { exists = event_target:technosphere_ship }
+
+	picture_event_data = {
+		room = technosphere_room
+	}
+
+	option = {
+		name = leviathans.1053.a
+		response_text = leviathans.1053.a.reply
+		default_hide_option = yes
+	}
+	option = {
+		name = leviathans.1053.b
+		response_text = leviathans.1053.b.reply
+	}
+}
+
+#Contacting the technosphere
+country_event = {
+	id = leviathans.1055
+	title = sphere
+	desc = leviathans.1055.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	trigger = {
+		exists = event_target:technosphere_ship
+		NOT = { has_country_flag = worm_events_available }
+	}
+
+	picture_event_data = {
+		room = technosphere_room
+	}
+
+	option = {
+		name = leviathans.1055.a
+		#default_hide_option = yes
+		hidden_effect = {
+			country_event = { id = leviathans.1056 }
+		}
+	}
+}
+
+#Dialogue with the Technosphere
+country_event = {
+	id = leviathans.1056
+	title = sphere
+	desc = leviathans.1056.desc
+	is_triggered_only = yes
+	diplomatic = yes
+
+	trigger = { exists = event_target:technosphere_ship }
+
+	picture_event_data = {
+		room = technosphere_room
+	}
+
+	option = {
+		name = leviathans.1056.a
+		response_text = leviathans.1056.a.reply
+		is_dialog_only = yes
+	}
+	option = {
+		name = leviathans.1056.b
+		response_text = leviathans.1056.b.reply
+		is_dialog_only = yes
+	}
+	option = {
+		name = leviathans.1056.c
+		response_text = leviathans.1056.c.reply
+		is_dialog_only = yes
+		trigger = {
+			OR = {
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+	}
+	option = {
+		name = leviathans.1056.d
+		hidden_effect = {
+			country_event = { id = leviathans.1060 }
+		}
+	}
+	option = {
+		name = leviathans.1056.e
+		response_text = leviathans.1056.e.reply
+		add_resource = { influence = 100 }
+	}
+}
+
+#Offer your services to the Technosphere
+country_event = {
+	id = leviathans.1060
+	title = sphere
+	desc = leviathans.1060.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	trackable = yes
+
+	trigger = { exists = event_target:technosphere_ship }
+
+	picture_event_data = {
+		room = technosphere_room
+	}
+
+	immediate = {
+		random_system = {
+			limit = {
+				has_star_flag = guardians_technosphere_system
+			}
+			random_system_planet = {
+				limit = {
+					is_star = yes
+				}
+				save_event_target_as = technosphere_blackhole
+			}
+		}
+	}
+
+	option = {
+		name = leviathans.1060.a
+		response_text = leviathans.1060.a.reply
+		enable_special_project = {
+			name = TECHNOSPHERE_BLACKHOLE
+			location = event_target:technosphere_blackhole
+			owner = root 
+		}
+	}
+	option = {
+		name = leviathans.1056.e #GOODBYE
+		response_text = leviathans.1056.e.reply
+		add_resource = { influence = 100 }
+	}
+}
